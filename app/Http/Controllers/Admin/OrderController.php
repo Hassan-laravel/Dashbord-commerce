@@ -43,12 +43,12 @@ class OrderController extends Controller implements HasMiddleware
             'payment_status' => $request->payment_status,
         ]);
 
-        return back()->with('success', __('dashboard.messages.updated_successfully'));
+        return back()->with('success', __('messages.updated_successfully'));
     }
 
     public function destroy(Order $order)
     {
         $order->delete();
-        return redirect()->route('admin.orders.index')->with('success', __('dashboard.messages.deleted_successfully'));
+        return redirect()->route('admin.orders.index')->with('success', __('messages.deleted_successfully'));
     }
 }

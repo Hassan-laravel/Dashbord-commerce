@@ -57,6 +57,6 @@ class SettingController extends Controller
         // 5. Update settings (Translations are handled automatically by the package)
         $setting->update($data);
 
-        return back()->with('success', __('dashboard.messages.success'));
+        return back()->with('success', __('messages.success'));
     }
 }

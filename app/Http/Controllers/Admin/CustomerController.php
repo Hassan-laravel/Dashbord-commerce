@@ -57,7 +57,7 @@ class CustomerController extends Controller implements HasMiddleware
 
         $customer->update($data);
 
-        return redirect()->route('admin.customers.index')->with('success', __('dashboard.messages.updated_successfully'));
+        return redirect()->route('admin.customers.index')->with('success', __('messages.updated_successfully'));
     }
 
     public function destroy(User $customer)
@@ -66,6 +66,6 @@ class CustomerController extends Controller implements HasMiddleware
         // if($customer->orders()->count() > 0) { ... }
 
         $customer->delete();
-        return back()->with('success', __('dashboard.messages.deleted_successfully'));
+        return back()->with('success', __('messages.deleted_successfully'));
     }
 }

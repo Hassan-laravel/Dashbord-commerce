@@ -186,7 +186,7 @@
     function openAddModal() {
         document.getElementById('categoryForm').reset();
         document.getElementById('formMethod').value = 'POST';
-        document.getElementById('categoryForm').action = "{{ route('admin.categories.store') }}";
+        // document.getElementById('categoryForm').action = "{{ route('admin.categories.store') }}";
         document.getElementById('modalTitle').innerText = "{{ __('dashboard.categories.add_new') }}";
         removeImage();
         new bootstrap.Modal(document.getElementById('categoryModal')).show();

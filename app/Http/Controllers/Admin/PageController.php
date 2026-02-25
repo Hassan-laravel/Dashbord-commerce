@@ -46,7 +46,7 @@ class PageController extends Controller
 
         Page::create($data);
 
-        return redirect()->route('admin.pages.index')->with('success', __('dashboard.messages.created_successfully'));
+        return redirect()->route('admin.pages.index')->with('success', __('messages.created_successfully'));
     }
 
     public function edit(Page $page)
@@ -70,12 +70,12 @@ class PageController extends Controller
 
         $page->update($data);
 
-        return redirect()->route('admin.pages.index')->with('success', __('dashboard.messages.updated_successfully'));
+        return redirect()->route('admin.pages.index')->with('success', __('messages.updated_successfully'));
     }
 
     public function destroy(Page $page)
     {
         $page->delete();
-        return back()->with('success', __('dashboard.messages.deleted_successfully'));
+        return back()->with('success', __('messages.deleted_successfully'));
     }
 }

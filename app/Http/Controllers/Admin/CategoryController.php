@@ -44,7 +44,7 @@ class CategoryController extends Controller
         Category::create($data);
 
         return redirect()->route('admin.categories.index')
-            ->with('success', __('dashboard.messages.category_created'));
+            ->with('success', __('messages.category_created'));
     }
 
     public function edit($id)
@@ -87,7 +87,7 @@ class CategoryController extends Controller
         $category->update($data);
 
         return redirect()->route('admin.categories.index')
-            ->with('success', __('dashboard.messages.category_updated'));
+            ->with('success', __('messages.category_updated'));
     }
 
     public function destroy(Category $category)
@@ -98,6 +98,6 @@ class CategoryController extends Controller
         }
 
         $category->delete();
-        return back()->with('success', __('dashboard.messages.category_deleted'));
+        return back()->with('success', __('messages.category_deleted'));
     }
 }

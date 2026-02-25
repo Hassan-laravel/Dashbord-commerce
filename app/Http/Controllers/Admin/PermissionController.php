@@ -32,7 +32,7 @@ class PermissionController extends Controller implements HasMiddleware
 
         Permission::create(['name' => $request->name]);
 
-        return redirect()->back()->with('success', __('dashboard.messages.permission_created'));
+        return redirect()->back()->with('success', __('messages.permission_created'));
     }
 
     public function update(Request $request, Permission $permission)
@@ -43,12 +43,12 @@ class PermissionController extends Controller implements HasMiddleware
 
         $permission->update(['name' => $request->name]);
 
-        return redirect()->back()->with('success', __('dashboard.messages.permission_updated'));
+        return redirect()->back()->with('success', __('messages.permission_updated'));
     }
 
     public function destroy(Permission $permission)
     {
         $permission->delete();
-        return redirect()->back()->with('success', __('dashboard.messages.permission_deleted'));
+        return redirect()->back()->with('success', __('messages.permission_deleted'));
     }
 }
