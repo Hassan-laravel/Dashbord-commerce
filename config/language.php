@@ -25,5 +25,10 @@ return [
             'dir'  => 'ltr',
             'flag' => 'us',
         ],
+        'nl' => [
+            'name' => 'Dutch',
+            'dir'  => 'ltr',
+            'flag' => 'nl',
+        ],
     ],
 ];
