@@ -77,7 +77,7 @@ class ProductController extends Controller implements HasMiddleware
             }
         }
 
-        return redirect()->route('admin.products.index')->with('success', __('messages.product_created'));
+        return redirect()->route('admin.products.index')->with('success', __('dashboard.general.created_successfully'));
     }
 
     public function edit(Product $product)
@@ -128,7 +128,7 @@ class ProductController extends Controller implements HasMiddleware
             }
         }
 
-        return redirect()->route('admin.products.index')->with('success', __('messages.product_updated'));
+        return redirect()->route('admin.products.index')->with('success', __('dashboard.general.updated_successfully'));
     }
 
     public function destroy(Product $product)
@@ -142,7 +142,7 @@ class ProductController extends Controller implements HasMiddleware
         }
 
         $product->delete();
-        return back()->with('success', __('messages.product_deleted'));
+        return back()->with('success', __('dashboard.general.deleted_successfully'));
     }
 
     public function deleteImage($id)
@@ -156,6 +156,6 @@ class ProductController extends Controller implements HasMiddleware
 
         $image->delete();
 
-        return response()->json(['success' => __('messages.image_deleted')]);
+        return response()->json(['success' => __('dashboard.general.image_deleted')]);
     }
 }
